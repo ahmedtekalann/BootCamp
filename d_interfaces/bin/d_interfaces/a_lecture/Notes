@@ -1,0 +1,27 @@
+Plug-Play: Mevcut kodu bozmadan yeni özelliði mevcut koda dahil etmek.
+
+NoSQL ve Elastic Search; Database, File ve Sms gibi loglarýn tutulduðu ortamlardýr.
+
+Spring'le kaynaga ekleme isleri oldukca kolay.
+
+Birbirinin alternatifi olan þeyleri if'le yapmak if'i suistimal etmek demektir. Bunu yapmamak için override mantýðý kullanýlýr. (inheritance veya interface yapýsý ile)
+
+Simple is the best: Doðru kodu doðru yere yazma kuralý.
+
+Klasör isimlerini Java'daki saklý kelimelerle (reserve words, key vs.) kaydetme! (örn package interface deðil package interfaces)
+	Interface  sýnýf isimlerini olustururken hangi community hangi þekilde seviyorsa o þekilde kullanmak iyidir. (Java'da Logger, .NET'de ILogger. Baþýna "I" koymak.)
+	
+Interface'de, implemente edilecek metodlari uygulamak zorundayiz. inheritance'de zorunlu deðil, istersek yapariz. (inheritance ve interface olayý tecrübeyle geliþir, kafada oturur.)
+	method imzalarýný interface sýnýfta tanýmlarýz (sonuna ; koyarak), method kullanýmýný implement edilen sýnýfta yazmak zorundayýz (zaten bize uyari verir, izin vermez yazmazsak.)
+		örnek public interface A { void method(); } public class B { public void method(){ /*islemler...*/ } }
+			(Buradaki public oto override edildiginden gelir.)
+	
+Dependency Injection - 2 tip baðýmlýlýk vardýr: Losely ve Tightly Coupled. (Gevþek ve Katý). Baðýmlýlýklar Losely'e çekmek gerek.
+	new kullanmak bir baðýmlýlýktýr. 
+	 Bunun önüne geçmek için uygulanan yöntemlerden biri "static" kullanýmýdýr. 
+		static her zaman bellektedir, bu belleði yorduðumuz anlamýna gelmez baðýmlýlýðý aza indirgediðimiz için. 
+			static'i class'larda deðil class'ýn methodlarýnda veya inner class'larda kullaniriz. 
+				örnek: public class A {public static void method(){}} çaðýrmak (A.method)
+	 Bir diðer yöntem; kullanmak istediðimiz class'ta kullanmak istenilen class'ý private olarak tanýmlayýp constructor field'lara atama yapmak
+	 	örnek: public class A { private B b; public B(B b){this.b=b;}}
+
