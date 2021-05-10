@@ -1,0 +1,37 @@
+Çok katmanlı 83 katmanlı mimari) Bir otomasyon projesinde (Yaygın olarak kullanılan programlama türü(Banka vb), dbnin oldugu dbyle ılgılı ıslemler yapıldıgı, dıs servislerle iletişim(mernis vb)
+Temel otomasy projelerınde 3 bacak var. 1i veriye erişim sağlanılan yer(veritabanına ulasılan yer(temel sogular sayesınde verıtabanına erısılır ıslemler yapılır)). Bu katmana veri erişim katmanı denir.
+   "Data Access, Data Access Layer, DDD vb. Hepsinde mantık aynı.
+	Data Access katmanı veriye erişim sağlanılan yer. Veritabanı var (Oracle, Sql, Excel vb.) Data Access'te veriye erişim dışında asla bir kod yazılmaz. (Hepsi buradada urunu lısteledın, sepete ekledin,
+	  giriş yapmak. Urun ekleme icin kurallar vardır cesıtlı. 
+	Bussiness katmanı Urunu eklemek ıcın kategorıde sınırı asmaman gerekir(kontrol , iş kuralları). Burada iş kuralları yazılır. Oyun yazıldı. Şart kuralları vb. (Puanlama). 
+	Arayüz katmanı. Kullanıcıyla etkılesım kurulan yer. Kullanıcıya sartlara gore ekranlar sunulur, kullanıcıdan bilgiler alınır. Sektorde genelde burası en cok suıstımal edılen yer. Buraya sadece arayuzu 
+	  ılgılendıren seyler yazılır. Gunumuzde JSP, Android Mobil Geliştirme Ortamı bunlar yaygın olarak kullanılır ama bunlar yerıne bız servıs tabanlı yapılara gecıyoruz. cunku gunumuzde artık dagıtık 
+	  sıstemler var. ornegın mernis. mernis hangı dılde yazıldı bılmıyoruz. farklı sistemlerin bizim sistemle ıletısım kurması gerekıyor. JSP GUNUMZDE KULLANIMI DUSUYOR. bUNLAR YERİNE mesela 
+	  bankada androıd , ios geliştirme ortamı, web geliştirme (React), masaustu geliştirme (Swing). Bunlarla erısım yapabılmek ıcın ortak dılın konusulması gerekır. Mernis, SOAP denilen mımarıyı kullanır. 
+	  Gunumuzde artık SOAP yerıne Restful servis yapıları (sistemler, API'ler) kullanılıyor. Apiler ortak bir yapıya, syntax'a sahip. Android, ios vb bunların hepsını kabul etmiş. Cunku API dıs dunyayla etkılesım 
+  	  saglanabılecek altyapı saglar. Mesela Business'te kullanılan Java direkt React'le kullanılmaz. Api yardımıyla yapılır. Dıs dunyayla ıletısım saglıyor. Biz Api'ye Springle başlayıp React'le devam 
+         	  edicez.
+
+	Yardımcı katmanlar: Entities'i yapılandırdıgımız yer. Ozellık tutan operasyonları (Customer, Product, Gamer) bu katmanın ıcıne yazıyoruz. Tum sısteme hızmet eden nesnelerı buraya yazyoruz. (Data 
+	  urunuekler, busıness urunu ekleme kontrolu yapar, )
+	Core, tum sıstemde (tum projelerde) kullanılabılecegımız kodları ıcerır. Ortak katmandır. (Common, Core) Bankada personel takıp sıstemınde, risk yonetımınde, kredılendırmede, eticarette de kullanılır. 
+	  Her zaman her yerde kullanılabılen kodlar yazılır.
+		
+
+
+
+
+
+	katmanlar soyutlama teknıklerıyle erısım saglarlar. 3 katman bırbırıyle ınterface'lerle erısırler misal.
+		dataaccess hibernate kullandı mesela otomatık dıgerlerı de onu kullanır. ya da jdbc kullandı. bunlar bırbırının alternatıftır.
+
+
+concreteler ısı yapan gercek sınıflar. Product vs
+her concrete'in abstract'i vardir.
+Spring boot sen bir ... sunu hazır olarak sunan yapidir. hazır repository'ler.
+
+
+
+refactoring: kod duzenleme
+
+iş sınıfı interfacelerimizi "service" olarak veriyoruz. (is sinifi interface'i)
