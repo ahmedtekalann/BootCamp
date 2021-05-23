@@ -1,0 +1,25 @@
+Türkçe / Turkish
+
+Ayrı bir konu üzerinden değil bir önceki ders (6.gün Kurumsal Mimaride Spring Boot, northwind projesi) üzerinden devam edildi.
+
+swagger entegrasyonu dahil edildi. swagger api'lerimizi hızlıca test edebilmemizi sağlayan arayüz ve versiyonlama ortamı sunar. Dokumantasyon sürecinde oldukça faydalıdır.
+
+projeye bağımlılıklar dahil edildi ki swagger'ı implemente edelim.
+
+Bir core katmanı oluşturuldu, bu katmana araçlar paketi bu pakete ise sonuçlar paketi eklendi. Bu katmandaki bu sonuçlar paketi verilerin başarıyla işlenmesini kontrol eden işlerin yapıldığı pakettir.
+
+Değişiklik yapılması gereken sınıflarda değişiklikler yapıldı. Kimisinde eski kodlar silinmedi yorum satırı olarak bırakıldı.
+
+
+English / İngilizce
+
+It was continued on the previous lesson (6th day Spring Boot in Enterprise Architecture, northwind project), not on a separate topic.
+
+swagger integration included. It provides an interface and versioning environment that enables us to test our swagger APIs quickly. It is very useful in the documentation process.
+
+Dependencies are included in the project so that we can implement the swagger.
+
+A core layer was created, the tools package was added to this layer and the results package was added to this package. This package of results in this layer is the package in which the works controlling the successful processing of the data are done.
+
+Changes were made in the classes that needed to be changed. In some, the old codes were not deleted but left as a comment line.
+
