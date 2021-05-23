@@ -6,6 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kodlamaio.norhtwind.business.abstracts.ProductService;
+import kodlamaio.norhtwind.core.utilities.results.DataResult;
+import kodlamaio.norhtwind.core.utilities.results.Result;
+import kodlamaio.norhtwind.core.utilities.results.SuccessDataResult;
+import kodlamaio.norhtwind.core.utilities.results.SuccessResult;
 import kodlamaio.norhtwind.dataAccess.abstracts.ProductDao;
 import kodlamaio.norhtwind.entities.concretes.Product;
 
@@ -21,9 +25,22 @@ public class ProductManager implements ProductService{
 	}
 
 	@Override
-	public List<Product> getAll() {
+	//public List<Product> getAll() { old one
+	public DataResult<List<Product>> getAll(){
+		
+		// return this.productDao.findAll(); old one return
+		
+		return	new SuccessDataResult<List<Product>>(this.productDao.findAll(),
+				"Data was listed.") ;
+				
+		
+	}
 
-		return this.productDao.findAll();
+	@Override
+	public Result add(Product product) {
+		//save methoduyla ekleme ve guncellemeler hizlica yapilabilir.
+		this.productDao.save(product);
+		return new SuccessResult("Product was added.");
 	}
 
 }
